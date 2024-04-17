@@ -1,0 +1,788 @@
+html{
+  background-color: rgb(233, 233, 233);
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width:  1140px;
+  max-width: 100%;
+  margin: 0px auto;
+  padding: 0;
+}
+
+
+nav{
+  align-items: center;
+  animation: navFadeIn  2s;
+  background: linear-gradient(to bottom right , #d0d0d0, rgb(68, 87, 65));
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  height: 80px;
+}
+
+h2{
+  text-align: center;
+}
+
+.menu_logo{
+  align-items: center;
+  display: flex;
+
+ }
+
+nav p{
+  display: block;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 36px;
+}
+
+
+
+.img_logo{
+  height: 60px;
+  margin: 10px;
+  width: 60px;
+}
+
+.menu_list{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.menu_list a {
+  color: rgb(229, 228, 228);
+  letter-spacing: 1px;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 1s;
+
+  
+}
+
+.menu_list a:hover{
+  color: rgb(163, 237, 163); 
+
+}
+
+.button_menu, .button_menu_close{
+  display: none;
+}
+
+.slider{
+  position: relative;
+}
+
+h1{
+  animation: h1FadeIn  2s;
+  bottom: 10%;
+  color: rgb(209, 209, 209);
+  font-size: 54px;
+  position: absolute;
+  right: 100px;
+  text-shadow: rgb(0, 0, 0) 15px 5px 5px;
+}
+
+.slider_img{
+  display: none;
+}
+
+.slider_img.active{
+  display: block;
+  height: 60vh;
+  object-fit: cover;
+  width: 100%;
+
+}
+
+.button_slider_left, .button_slider_right{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  transition: color 0.5s;
+  transform: translate(0%, -50%);
+ 
+}
+
+.button_slider_left{
+  left: 1%;
+}
+
+.button_slider_right{
+  right: 1%;
+}
+
+.button_slider_left:hover, .button_slider_right:hover{
+  color: rgb(163, 237, 163);
+  cursor: pointer;
+}
+
+.dots{
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, 0%);
+
+}
+
+
+.dot{
+  animation: GreentoWhite 1s;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  height: 5px;
+  width: 40px;
+}
+
+.dot:hover{
+  animation: whiteToGreen 1s;
+  cursor: pointer;
+  background-color: rgb(163, 237, 163);
+}
+
+#aboutus{
+  background-color: rgb(68, 87, 65);
+  height: 75vh;
+  padding: 40px 10px;
+
+  position: relative;
+}
+
+
+.aboutus_img{
+  display: block;
+  height: 300px;
+  left: 50px;
+  position: absolute;
+  width: 500px;
+}
+
+
+
+.aboutus_text{
+  background-color: rgba(255,255,255, 0.7);
+  display: block;
+  margin-bottom: 5%;
+  padding: 40px;
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  width: 500px;
+}
+
+.aboutus_text h2{
+  margin-top: 0px;
+  text-align: start;
+}
+
+
+.aboutus_button{
+  background-color: transparent;
+  border: solid black 1px;
+  border-radius: 25px;
+  color: black;
+  margin: 10px 0px 0px 0px;
+  padding: 10px 30px;
+  transition: all 1s;
+}
+
+.aboutus_button:hover{
+  background-color: rgb(207, 255, 207);
+  border: none;
+  color: rgb(68, 87, 65);
+  cursor: pointer;
+  transform: scale(1.10);
+  transition: all 1s;
+  
+}
+
+#offer{
+  background-color: white;
+  padding: 30px;
+  position: relative;
+}
+
+
+.oferta_grupa{
+  display: flex;
+ 
+}
+
+.oferta{
+
+  align-items: center;
+  background-color: rgb(68, 87, 65);
+  box-shadow: gray 0px 5px  15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+
+
+.oferta_img{
+  max-height: 150px;
+  max-width: 250px;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 1s;
+}
+
+.oferta_img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.oferta_popup{
+  display: none;
+}
+
+
+.oferta_popup.active{
+  animation: ImgFadeIn 0.5s;
+  background-color: rgba(255,255,255, 0.7);
+  backdrop-filter: blur(5px);
+  display: block;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+}
+
+.oferta_popup.fade_out {
+  animation: ImgFadeOut 0.5s;
+}
+
+.oferta_popup img{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.oferta_popup_close {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  font-size: 32px;
+  position: absolute;
+  right: 15%;
+  top: 5%;
+  transition: color 0.5s;
+}
+
+.oferta_popup_close:hover{
+  cursor: pointer;
+  color: rgb(163, 237, 163);
+}
+
+#attractions{
+  background-color: rgb(68, 87, 65);
+  padding: 30px;
+}
+
+#attractions h2{
+  color: white;
+}
+
+.attractions{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.attraction{
+  height: 270px;
+  margin: 15px;
+  position: relative;
+  width: 270px;
+
+}
+
+.attraction:hover{
+  cursor: pointer;
+}
+
+.atr_img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.atr_img + p{
+  text-shadow: 2px 2px 2px black;
+  color: white;
+
+  font-size: 24px;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+} 
+
+
+
+.atr_text{
+  display: none;
+}
+
+.atr_text.active{
+  animation: ImgFadeIn 0.5s;
+  background-color: rgba(218, 255, 218, 0.7);
+
+  backdrop-filter: blur(2px);
+  display: block;
+  height: 100%;
+  padding: 0px 15px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+
+}
+
+
+.atr_text h3{
+  padding-top: 5px;
+}
+
+#pricelist{
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+
+}
+
+table{
+  background-color: rgba(215, 215, 215, 0.7);
+  box-shadow: gray 0px 5px  15px;
+  text-align: center;
+  width: 75%;
+
+}
+
+td:hover{
+  background-color:  rgba(207, 255, 207, 0.8);;
+}
+
+table, th, td {
+  border: solid 2px black;
+  border-collapse: collapse;
+}
+
+th{
+  background-color: rgb(68, 87, 65);
+  color: white;
+  font-weight: lighter;
+}
+
+th, td {
+  padding: 10px 0px;
+}
+
+.pricelist_info{
+  display: none;
+}
+
+#gallery{
+  align-items: center;
+  background-color: rgb(68, 87, 65);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px;
+  position: relative;
+}
+
+#gallery h2 {
+  color: white;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery_img{
+  height: 200px;
+  margin: 15px;
+  transform: scale(1);
+  transition: transform 0.5s;
+  width: 300px;
+}
+
+.gallery_img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.gallery_popup{
+  display: none;
+}
+
+.gallery_popup.active{
+  background-color: rgba(215, 215, 215, 0.7);
+  backdrop-filter: blur(5px);
+  display: block;
+  left: 0px;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+}
+
+.gallery_popup_img{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.gallery_close, .gallery_prev, .gallery_next {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  font-size: 32px;
+  position: absolute;
+  
+  transition: color 0.5s;
+}
+
+.gallery_close{
+  right: 5%;
+  top: 5%;
+}
+
+.gallery_prev{
+  top: 50%;
+  left: 5%;
+  transform: translate(0%, -50%);
+}
+
+.gallery_next{
+  top: 50%;
+  right: 5%;
+  transform: translate(0%, -50%);
+}
+
+.gallery_close:hover, .gallery_prev:hover, .gallery_next:hover{
+  cursor: pointer;
+  color: rgb(163, 237, 163);
+}
+
+#contact{
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  
+  padding: 30px 0px;
+}
+
+fieldset{
+  background-color: rgba(215, 215, 215, 0.7);
+  border: none;
+  box-shadow: gray 0px 5px  15px;
+  width: 40vw;
+}
+
+
+.contact_grid{
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 35% 61% ;
+  margin: 0% 2%;
+}
+
+.data_rezerwacji, .data_rezerwacji p{
+  display: inline;
+}
+
+textarea{
+  height: 200px;
+}
+
+input{
+  border: black 1px solid;
+  border-radius: 5px;
+  height: 26px;
+}
+
+.formlularz_wyrownanie{
+  align-items: center;
+  display: flex;
+}
+
+
+.form_buttons{
+  display: flex;
+  justify-content: end;
+}
+
+.form_button{
+    background-color: transparent;
+    border: solid black 1px;
+    border-radius: 5px;
+    color: black;
+    margin: 20px 0px 20px 20px;
+    padding: 5px 30px 20px 30px;
+    transition: all 1s;
+  }
+  
+  .form_button:hover{
+    background-color: rgb(207, 255, 207);
+    border: none;
+    color: rgb(68, 87, 65);
+    cursor: pointer;
+    transform: scale(1.10);
+    transition: all 1s;
+    
+  }
+
+  input:focus, textarea:hover{
+    background-color: rgb(207, 255, 207);
+  }
+
+#footer{
+  background: linear-gradient(to top right , #d0d0d0, rgb(68, 87, 65));
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.footer_address div{
+  align-items: center;
+  display: flex;
+
+}
+
+#footer img{
+  height: 20px;
+  padding-right: 10px;
+  width: 20px;
+}
+
+address{
+  font-style: normal;
+}
+
+.footer_social div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer_social a{
+  align-items: center;
+  display: flex;
+  
+}
+
+.footer_menu{
+  list-style: none;
+  padding: 0px;
+}
+
+#footer a{
+  color: black;
+  text-decoration: none;
+  padding: 5px 0px;
+  transition: color 1s;
+}
+
+#footer a:hover{
+  color: rgb(163, 237, 163); 
+  cursor: pointer;
+}
+
+@keyframes navFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes h1FadeIn {
+  from {opacity: 0;
+        right: -100px;}
+  to {opacity: 1;
+      right: 100px;}
+}
+
+@keyframes whiteToGreen {
+  from {background-color: white;}
+  to {background-color: rgb(163, 237, 163);}
+}
+
+@keyframes GreentoWhite {
+  from {background-color: rgb(163, 237, 163);}
+  to {background-color: white;}
+}
+
+@keyframes ImgFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes ImgFadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@media screen and (max-width: 992px) {
+  #aboutus{
+    background-color: rgb(68, 87, 65);
+    height: auto;
+    padding: 10px;
+    position: sticky;
+  }
+  
+   .aboutus_img{
+    display: none;
+   }
+  
+    .aboutus_text{
+      height: auto;
+      position: sticky;
+     
+      width: auto;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+  html{
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  
+  }
+
+  nav p{
+    display: none;
+  }
+
+
+
+  .menu_list{
+    display: none;
+  }
+
+  .menu_list.active{
+    background: linear-gradient(to bottom left , #d0d0d0, rgb(68, 87, 65));
+    display: block;
+    margin: 0px;
+    left: 0px;
+    opacity: 1;
+    top: 0px;
+    transform: opacity 1s;
+    padding: 0px;
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+
+
+  }
+
+  .menu_list li{
+    padding: 20px 10px;
+  }
+
+  h1{
+    font-size: 24px;
+  }
+
+  .button_menu{
+    background-color: transparent;
+    border: none;
+    display: block;
+  }
+
+  .button_menu:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+
+  .button_menu img{
+    height: 30px;
+    width: 30px;
+  }
+
+  .button_menu_close{
+    background-color: transparent;
+    border: none;
+    color: white;
+    display: block;
+    font-size: 28px;
+    margin: 10px;
+    position: absolute;
+   right: 10px;
+  }
+
+ .button_menu_close:hover{
+  cursor: pointer;
+  color: rgb(163, 237, 163); 
+ }
+
+
+  #offer{
+    padding: 10px;
+  }
+
+  .oferta_grupa{
+    display: flex;
+    flex-direction: column;
+   
+  }
+ 
+th, tr{
+  padding: 10px 20px;
+}
+
+ .hidden_column{
+  display: none;
+ }
+
+  .pricelist_info{
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  #contact{
+    background-color: transparent;
+  }
+
+  fieldset{
+    background: white;
+    box-shadow: none;
+    font-size: 15px;
+    width: 90vw;
+  }
+
+  .formlularz_wyrownanie{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .formlularz_wyrownanie input{
+    margin: 5px;
+  }
+  
+
+  #footer{
+    display: block;
+    padding: 30px;
+  }
+ }
