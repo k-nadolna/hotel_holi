@@ -12,7 +12,7 @@ html{
 nav{
   align-items: center;
   animation: navFadeIn  2s;
-  background: linear-gradient(to bottom right , #d0d0d0, rgb(68, 87, 65));
+  background:white;
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
@@ -25,6 +25,7 @@ h2{
 
 .menu_logo{
   align-items: center;
+  color: rgb(84, 84, 84);
   display: flex;
 
  }
@@ -50,7 +51,7 @@ nav p{
 }
 
 .menu_list a {
-  color: rgb(229, 228, 228);
+  color: rgb(84, 84, 84);
   letter-spacing: 1px;
   padding: 10px;
   text-decoration: none;
@@ -76,7 +77,7 @@ nav p{
 h1{
   animation: h1FadeIn  2s;
   bottom: 10%;
-  color: rgb(209, 209, 209);
+  color: rgb(255, 255, 255);
   font-size: 54px;
   position: absolute;
   right: 100px;
@@ -88,6 +89,7 @@ h1{
 }
 
 .slider_img.active{
+  background-color: rgba(73, 72, 72, 0.1);
   display: block;
   height: 60vh;
   object-fit: cover;
@@ -141,23 +143,21 @@ h1{
 .dot:hover{
   animation: whiteToGreen 1s;
   cursor: pointer;
-  background-color: rgb(163, 237, 163);
+  background-color: rgba(218, 218, 218, 0.7);
 }
 
 #aboutus{
-  background-color: rgb(68, 87, 65);
-  height: 75vh;
-  padding: 40px 10px;
-
-  position: relative;
+  background-color: rgb(255, 255, 255);
+  padding: 60px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .aboutus_img{
   display: block;
   height: 300px;
-  left: 50px;
-  position: absolute;
   width: 500px;
 }
 
@@ -168,9 +168,6 @@ h1{
   display: block;
   margin-bottom: 5%;
   padding: 40px;
-  position: absolute;
-  right: 50px;
-  bottom: 0;
   width: 500px;
 }
 
@@ -191,7 +188,7 @@ h1{
 }
 
 .aboutus_button:hover{
-  background-color: rgb(207, 255, 207);
+  background-color: rgba(218, 218, 218, 0.7);
   border: none;
   color: rgb(68, 87, 65);
   cursor: pointer;
@@ -215,9 +212,9 @@ h1{
 .oferta{
 
   align-items: center;
-  background-color: rgb(68, 87, 65);
+  background: linear-gradient(to top right , white, rgb(218, 211, 199));
   box-shadow: gray 0px 5px  15px;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -287,12 +284,12 @@ h1{
 }
 
 #attractions{
-  background-color: rgb(68, 87, 65);
+  background: linear-gradient(to top right , white, rgb(218, 211, 199));
   padding: 30px;
 }
 
 #attractions h2{
-  color: white;
+  color: black;
 }
 
 .attractions{
@@ -337,7 +334,7 @@ h1{
 
 .atr_text.active{
   animation: ImgFadeIn 0.5s;
-  background-color: rgba(218, 255, 218, 0.7);
+  background-color: rgba(218, 218, 218, 0.7);
 
   backdrop-filter: blur(2px);
   display: block;
@@ -372,7 +369,7 @@ table{
 }
 
 td:hover{
-  background-color:  rgba(207, 255, 207, 0.8);;
+  background-color:  rgb(245, 245, 245);
 }
 
 table, th, td {
@@ -381,8 +378,8 @@ table, th, td {
 }
 
 th{
-  background-color: rgb(68, 87, 65);
-  color: white;
+  background-color: rgb(218, 211, 199);
+  color: black;
   font-weight: lighter;
 }
 
@@ -396,7 +393,7 @@ th, td {
 
 #gallery{
   align-items: center;
-  background-color: rgb(68, 87, 65);
+  background: linear-gradient(to top right , white, rgb(218, 211, 199));
   display: flex;
   flex-direction: column;
   padding: 30px 0px;
@@ -404,7 +401,7 @@ th, td {
 }
 
 #gallery h2 {
-  color: white;
+  color: black;
 }
 
 .gallery{
@@ -491,7 +488,7 @@ th, td {
 }
 
 fieldset{
-  background-color: rgba(215, 215, 215, 0.7);
+  background: linear-gradient(to top right , white, rgb(218, 211, 199));
   border: none;
   box-shadow: gray 0px 5px  15px;
   width: 40vw;
@@ -551,11 +548,12 @@ input{
   }
 
   input:focus, textarea:hover{
-    background-color: rgb(207, 255, 207);
+    background-color: rgb(245, 245, 245);
+    
   }
 
 #footer{
-  background: linear-gradient(to top right , #d0d0d0, rgb(68, 87, 65));
+  background: linear-gradient(to top right , white, rgb(218, 211, 199));
   display: flex;
   justify-content: space-around;
 
