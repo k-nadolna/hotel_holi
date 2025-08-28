@@ -1,3 +1,5 @@
+const navbar = document.querySelector('.navbar');
+
 const menuList = document.querySelector('.menu_list');
 const buttonMenu = document.querySelector('.button_menu');
 const buttonMenuClose = document.querySelector('.button_menu_close');
@@ -22,6 +24,17 @@ const galleryPopupImg = document.querySelector('.gallery_popup_img');
 const galleryPrev = document.querySelector('.gallery_prev');
 const galleryNext = document.querySelector('.gallery_next');
 const galleryClose = document.querySelector('.gallery_close');
+
+// shrink navbar
+function shrinkNavbar() {
+  if(window.scrollY > 50){
+    navbar.classList.add('shrink');
+  }else{
+    navbar.classList.remove('shrink');
+  }
+}
+
+window.addEventListener('scroll', shrinkNavbar);
 
 
 // navigation for mobile
@@ -56,7 +69,7 @@ Dot.forEach((dot, index) => {
     hideActiveSlide();
 
     SliderImg[index].classList.add('active');
-    activeIndex = index;
+    activeIndex = index;  
   })
 })
 
@@ -72,7 +85,7 @@ SliderButtonLeft.addEventListener('click', () => {
   SliderImg[activeIndex].classList.add('active');
 })
 
-SliderButtonRight.addEventListener('click', () => {
+function showNextSlide() {
   hideActiveSlide();
 
   if (activeIndex === undefined || activeIndex === SliderImg.length-1){
@@ -82,9 +95,15 @@ SliderButtonRight.addEventListener('click', () => {
   }
 
   SliderImg[activeIndex].classList.add('active');
+}
 
-})
+SliderButtonRight.addEventListener('click', showNextSlide);
 
+function autoSlider() {
+  setInterval(showNextSlide, 2000);
+};
+
+autoSlider();
 
 // offer
 

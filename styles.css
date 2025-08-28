@@ -1,47 +1,104 @@
+:root{
+  --color-accent: rgba(52, 117, 52, 1);
+  --color-bg: rgb(218, 211, 199);
+  --color-bg-dark: rgba(129, 121, 106, 1);
+  --color-text-light: rgba(236, 235, 235, 1);
+  --color-text-dark: rgba(88, 61, 31, 1);
+}
+
 html{
-  background-color: rgb(233, 233, 233);
   box-sizing: border-box;
+  padding: 0;
+}
+
+body{
+  background-color: rgba(246, 246, 246, 1);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  width:  1140px;
+  width:  80%;
   max-width: 100%;
   margin: 0px auto;
-  padding: 0;
 }
 
 
 nav{
-  align-items: center;
-  animation: navFadeIn  2s;
   background:white;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 30px;
-  height: 80px;
+  left: 0;
+  padding: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 1  ;
+}
+
+h1{
+  animation: h1FadeIn  2s;
+  bottom: 10%;
+  color: var(--color-text-light);
+  font-size: 54px;
+  position: absolute;
+  right: 100px;
+  text-shadow: rgb(0, 0, 0) 15px 5px 5px;
+  z-index: 1;
 }
 
 h2{
+  color: var(--color-text-dark);
+  font-family: Lato, sans-serif;
   text-align: center;
+  font-size: 32px;
 }
+.navbar{
+  align-items: center;
+  animation: navFadeIn  2s;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  margin: auto;
+  transition: all 0.3s;
+  width: 80%;
+}
+
+.navbar.shrink{
+  height: 50px;
+  transition: all 0.3s;
+}
+
 
 .menu_logo{
   align-items: center;
   color: rgb(84, 84, 84);
   display: flex;
-
+  padding: 0px 20px;
  }
 
-nav p{
+.menu{
+    padding: 0px 20px;
+}
+
+.navbar p{
   display: block;
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 36px;
+  transition: all 0.6s;
 }
 
+.navbar.shrink p{
+  font-size: 24px;
+  transition: all 0.6s;
+}
 
-
-.img_logo{
+.navbar .img_logo{
   height: 60px;
   margin: 10px;
-  width: 60px;
+  width: 60px;  
+  transition: all 0.6s;
+}
+
+.navbar.shrink .img_logo{
+  height: 40px;
+  margin: 5px;
+  width: 40px;
+  transition: all 0.6s;
 }
 
 .menu_list{
@@ -62,7 +119,8 @@ nav p{
 }
 
 .menu_list a:hover{
-  color: rgb(163, 237, 163); 
+  color: var(--color-accent); 
+  font-weight: 600;
 
 }
 
@@ -70,22 +128,22 @@ nav p{
   display: none;
 }
 
+
 .slider{
+  top: 80px;
+  height: 60vh;
   position: relative;
 }
 
-h1{
-  animation: h1FadeIn  2s;
-  bottom: 10%;
-  color: rgb(255, 255, 255);
-  font-size: 54px;
-  position: absolute;
-  right: 100px;
-  text-shadow: rgb(0, 0, 0) 15px 5px 5px;
-}
-
 .slider_img{
-  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  opacity: 0;
+  transition: all 1s;
 }
 
 .slider_img.active{
@@ -93,6 +151,7 @@ h1{
   display: block;
   height: 60vh;
   object-fit: cover;
+  opacity: 1;
   width: 100%;
 
 }
@@ -100,11 +159,11 @@ h1{
 .button_slider_left, .button_slider_right{
   background-color: transparent;
   border: none;
-  color: white;
+  color: var(--color-text-light);
   font-size: 24px;
   position: absolute;
   top: 50%;
-  transition: color 0.5s;
+  transition: color 0.3s;
   transform: translate(0%, -50%);
  
 }
@@ -118,7 +177,7 @@ h1{
 }
 
 .button_slider_left:hover, .button_slider_right:hover{
-  color: rgb(163, 237, 163);
+  color: var(--color-accent);
   cursor: pointer;
 }
 
@@ -135,7 +194,7 @@ h1{
   animation: GreentoWhite 1s;
   border: none;
   border-radius: 25px;
-  color: white;
+  color: var(--color-text-light);
   height: 5px;
   width: 40px;
 }
@@ -148,10 +207,11 @@ h1{
 
 #aboutus{
   background-color: rgb(255, 255, 255);
-  padding: 60px 10px;
+  padding: 100px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 
@@ -164,9 +224,8 @@ h1{
 
 
 .aboutus_text{
-  background-color: rgba(255,255,255, 0.7);
+  
   display: block;
-  margin-bottom: 5%;
   padding: 40px;
   width: 500px;
 }
@@ -184,7 +243,7 @@ h1{
   color: black;
   margin: 10px 0px 0px 0px;
   padding: 10px 30px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .aboutus_button:hover{
@@ -203,6 +262,10 @@ h1{
   position: relative;
 }
 
+#offer h3{
+  font-size: 24px;
+  margin: 0px;
+}
 
 .oferta_grupa{
   display: flex;
@@ -211,31 +274,31 @@ h1{
 
 .oferta{
 
-  align-items: center;
-  background: linear-gradient(to top right , white, rgb(218, 211, 199));
+  align-items: flex-start;
+  background: var(--color-bg-dark);
   box-shadow: gray 0px 5px  15px;
-  color: black;
+  color: var(--color-text-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 5px;
-  text-align: center;
   padding: 30px 10px;
 }
 
 
 
 .oferta_img{
-  max-height: 150px;
-  max-width: 250px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
+  margin-bottom: 10px;
   transform: scale(1);
   transition: transform 1s;
 }
 
 .oferta_img:hover{
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .oferta_popup{
@@ -252,7 +315,7 @@ h1{
   left: 0;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
 }
 
@@ -280,17 +343,14 @@ h1{
 
 .oferta_popup_close:hover{
   cursor: pointer;
-  color: rgb(163, 237, 163);
+  color: var(--color-accent);
 }
 
 #attractions{
-  background: linear-gradient(to top right , white, rgb(218, 211, 199));
+  background: var(--color-bg);
   padding: 30px;
 }
 
-#attractions h2{
-  color: black;
-}
 
 .attractions{
   display: flex;
@@ -393,16 +453,13 @@ th, td {
 
 #gallery{
   align-items: center;
-  background: linear-gradient(to top right , white, rgb(218, 211, 199));
+  background: var(--color-bg);
   display: flex;
   flex-direction: column;
   padding: 30px 0px;
   position: relative;
 }
 
-#gallery h2 {
-  color: black;
-}
 
 .gallery{
   display: flex;
@@ -475,7 +532,7 @@ th, td {
 
 .gallery_close:hover, .gallery_prev:hover, .gallery_next:hover{
   cursor: pointer;
-  color: rgb(163, 237, 163);
+  color: var(--color-accent);
 }
 
 #contact{
@@ -488,7 +545,7 @@ th, td {
 }
 
 fieldset{
-  background: linear-gradient(to top right , white, rgb(218, 211, 199));
+  background: var(--color-bg);
   border: none;
   box-shadow: gray 0px 5px  15px;
   width: 40vw;
@@ -538,7 +595,7 @@ input{
   }
   
   .form_button:hover{
-    background-color: rgb(207, 255, 207);
+    background-color: var(--color-accent);
     border: none;
     color: rgb(68, 87, 65);
     cursor: pointer;
@@ -553,7 +610,7 @@ input{
   }
 
 #footer{
-  background: linear-gradient(to top right , white, rgb(218, 211, 199));
+  background: var(--color-bg);
   display: flex;
   justify-content: space-around;
 
@@ -600,8 +657,9 @@ address{
 }
 
 #footer a:hover{
-  color: rgb(163, 237, 163); 
+  color: var(--color-accent);
   cursor: pointer;
+  font-weight: 600;
 }
 
 @keyframes navFadeIn {
@@ -618,11 +676,11 @@ address{
 
 @keyframes whiteToGreen {
   from {background-color: white;}
-  to {background-color: rgb(163, 237, 163);}
+  to {background-color: var(--color-accent);}
 }
 
 @keyframes GreentoWhite {
-  from {background-color: rgb(163, 237, 163);}
+  from {background-color: var(--color-accent);}
   to {background-color: white;}
 }
 
@@ -729,7 +787,7 @@ address{
 
  .button_menu_close:hover{
   cursor: pointer;
-  color: rgb(163, 237, 163); 
+  color: var(--color-accent); 
  }
 
 
