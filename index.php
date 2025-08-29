@@ -281,19 +281,7 @@
           <label>imię i nazwisko</label>
           <input type="text" name="name" required>
           <label>adres e-mail</label>
-<<<<<<< HEAD:index.php
           <input type="email" name="email" required>
-=======
-          <input type="email">
-        
-          <br>
-
-          <div class="formlularz_wyrownanie">
-            <input type="checkbox" name="wyslij" value="donadawcy" id="donadawcy">
-            <label for="donadawcy">Wyślij kopię maila na moj adres</label>
-          </div>
->>>>>>> a49e29dc94586a5bf9731119d7f69ca399809a4c:index.html
-
           <label>nr telefonu</label>
           <input type="text" name="phone" required>
        
