@@ -11,48 +11,57 @@
   <nav>
     <div class="navbar">
       <div class="menu_logo">
-      <img src="images/logo.png" height="512px" width="512px" class="img_logo">
-      <p>Hotel Holi</p>
-    </div>
+        <img src="images/logo.png" height="512px" width="512px" class="img_logo">
+        <p>Hotel Holi</p>
+      </div>
 
-    <div class="menu">
-      <button type="button" class="button_menu">
-        <img src="images/icons/menu.png" height="512px" width="512px">
-      </button>
-      <ul class="menu_list">
-        <button type="button" class="button_menu_close">x</button>
-        <li class="li_aboutus"><a href="#aboutus">O nas</a> </li>
-        <li><a href="#attractions">Atrakcje</a></li>
-        <li><a href="#offer">Oferta</a> </li>
-        <li><a href="#pricelist">Cennik</a> </li>
-        <li><a href="#gallery">Galeria</a> </li>
-        <li><a href="#contact">Kontakt</a> </li>
-      </ul>
-    </div>
-    </div>
-      
+      <div class="menu">
+        <button type="button" class="button_menu">
+          <img src="images/icons/menu.png" height="512px" width="512px">
+        </button>
+        <ul class="menu_list">
+          <button type="button" class="button_menu_close">x</button>
+          <li class="li_aboutus">
+            <a href="#aboutus">O nas</a> 
+          </li>
+          <li>
+            <a href="#attractions">Atrakcje</a>
+          </li>
+          <li>
+            <a href="#offer">Oferta</a>
+          </li>
+          <li>
+            <a href="#pricelist">Cennik</a>
+          </li>
+          <li>
+            <a href="#gallery">Galeria</a>
+          </li>
+          <li>
+            <a href="#contact">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>  
   </nav>
 
 
-        <div class="slider">
+  <div id="slider">
     <h1>Witamy w Hotelu Holi</h1>
     <div>
       <img src="images/img1.jpg" height="594px" width="1000px" class="slider_img active">
       <img src="images/img2.jpg" height="594px" width="1000px" class="slider_img">
       <img src="images/img3.jpg" height="594px" width="1000px" class="slider_img">
     </div>
-      <button type="button" class="button_slider_left"><</button>
-      <button type="button" class="button_slider_right">></button>
+      
+    <button type="button" class="button_slider_left"><</button>
+    <button type="button" class="button_slider_right">></button>
 
     <div class="dots">
       <button type="button" class="dot"></button>
       <button type="button" class="dot dot2"></button>
       <button type="button" class="dot dot3"></button>
-
     </div>
   </div>
-
-
 
   <div id="aboutus">
     <div>
@@ -111,10 +120,10 @@
       <div class="attraction">   
           <img src="images/attractions/sauna.jpg" height="660px" width="660px" class="atr_img">
           <p>Sauna</p>
-        <div class="atr_text">
-          <h3>Sauna</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus praesenelit molestias minus adipisci? Ullam sunt sapiente itaque explicabo aut quia.</p>
-        </div>
+          <div class="atr_text">
+            <h3>Sauna</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus praesenelit molestias minus adipisci? Ullam sunt sapiente itaque explicabo aut quia.</p>
+          </div>
       </div>
 
       <div class="attraction">
@@ -138,28 +147,24 @@
         <h3>Pokój 1-osobowy</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste quae officiis minima dolorem. Deserunt magnam nulla culpa vitae animi quia, sed quas, maxime harum, rem necessitatibus cum ipsam dolorum!
-        </p>
-        
+        </p> 
       </div>
 
       <div class="oferta oferta2">
-             <img src="images/room2.jpg" class="oferta_img">
+        <img src="images/room2.jpg" class="oferta_img">
         <h3>Pokój 2-osobowy</h3>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, quisquam quibusdam hic dolores unde eligendi rerum repellat aliquid a modi, fugiat deserunt, laborum ipsum? Atque culpa nemo voluptate modi necessitatibus.
         </p>
-   
       </div>
 
       <div class="oferta oferta3">
-                <img src="images/room3.jpg" class="oferta_img">
+        <img src="images/room3.jpg" class="oferta_img">
         <h3>Pokój 3-osobowy</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatem nisi labore quam cumque sapiente sequi, obcaecati velit aut totam aperiam expedita, quaerat dicta magni repellendus, possimus veniam adipisci quis?
         </p>  
-
       </div>
-
 
     </div>
 
@@ -167,9 +172,7 @@
       <img src="" height="530px" width="800px" class="ofeta_popup_img">
       <button type="button" class="oferta_popup_close">x</button>
     </div>
-  </div>
-
-  
+  </div>  
 
   <div id="pricelist">
     <h2> Cennik</h2>
@@ -222,74 +225,113 @@
       <button type="button" class="gallery_close">x</button>
       <button type="button" class="gallery_prev"><</button>
       <button type="button" class="gallery_next">></button>
-
     </div>
   </div>
 
   <div id="contact">
-    
-    <form action="/login.php" method="get">
+    <div class="contact-container">
+       <h2>Napisz do nas</h2>
+
+       <?php
+          if(isset($_POST['submit'])){
+            $recipient = "kontakt@resposite.pl";
+            $subject = $_POST['subject'];
+            $name = $_POST['name'];
+            $phone = $_POST['phone'];
+            $email = $_POST['email'];
+            $dateFrom = $_POST['date_from'] ?? '';
+            $dateTo =$_POST['date_to'] ?? '';
+            $message = $_POST['message'];
+
+            $body = "<p>Wiadomość od: $name ($email)</p>
+                    <p>Numer telefonu: $phone</p>
+                    <p>Data rezerwacji: $dateFrom - $dateTo</p>
+                    <p>Wiadomość:</p>
+                    <p> $message </p>";
+
+            $headers = "MIME-Version: 1.0\r\n";
+            $headers .= "Content-type: text/html; charset=UTF-8\r\n";
+            $headers .= "From: kontakt@resposite.pl\r\n";
+            $headers .= "Reply-To: $email\r\n";
+
+            if(empty($recipient) || empty($subject) || empty($message)){
+              
+
+               echo "<div class='danger-message'>
+                      <p>Wszystkie pola sa wymagane</p>
+                    </div>";
+            }else{
+              if(mail($recipient, $subject, $body, $headers)){
+              echo "<div class='success-message'>
+                      <p>Mail został wysłany</p>
+                    </div>";
+              }else{
+              echo "<div class='danger-message'>
+                      <p>Mail nie został wysłany</p>
+                    </div>";
+              }
+            }
+
+            
+          }
+       ?>
+      <form action="#contact" method="POST">
       <fieldset>
-        <h2>Napisz do nas</h2>
         <div class="contact_grid">
           <label>imię i nazwisko</label>
-          <input type="text">
-        
+          <input type="text" name="name" required>
           <label>adres e-mail</label>
-          <input type="email">
-        
-          <br>
-
-          <div class="formlularz_wyrownanie">
-          <input type="checkbox" name="wyslij" value="donadawcy" id="donadawcy">
-          <label for="donadawcy">Wyślij kopię maila na moj adres</label>
-          </div>
+          <input type="email" name="email" required>
 
           <label>nr telefonu</label>
-          <input type="text">
+          <input type="text" name="phone" required>
        
           <label>Temat wiadomości</label>
          
          <div class="formlularz_wyrownanie">
-          <input type="radio" name="temat" value="zapytanie" id="zapytanie">
-          <label for="zapytanie">zapytanie</label>
-          <input type="radio" name="temat" value="rezerwacja" id="rezerwacja">
-          <label for="rezerwacja">rezerwacja</label>
-          <input type="radio" name="temat" value="inne" id="inne">
-          <label for="inne">inne</label>
+          <input type="radio" name="subject" value="question" id="question" required>
+          <label for="question">zapytanie</label>
+          <input type="radio" name="subject" value="reservation" id="reservation" required>
+          <label for="reservation">rezerwacja</label>
+          <input type="radio" name="subject" value="other" id="other" required>
+          <label for="other">inne</label>
          </div> 
-       
-
         
           <label> Termin rezerwacji</label>
 
+
+          <?php
+              $today = date('Y-m-d');
+              $nextYear = date('Y-m-d', strtotime('+1 year'));
+          ?>
           <div class="data_rezerwacji">
-            <input type="date" name="data" value="od">
+            <input type="date" name="date_from" min=<?=$today ?>>
             <p> - </p>
-            <input type="date" name="data" value="do">
+            <input type="date" name="date_to" min=<?=$today ?> max=<?= $nextYear ?>>
           </div>
        
           <label>Treść wiadomości</label>
-          <textarea></textarea>
+          <textarea name="message" required ></textarea>
         
           <br>
-        <div class="form_buttons">
-          <input type="reset" value="Wyczyść" class="form_button">   
-        <input type="submit" value="Wyślij" class="form_button">
-        </div>
+          <div class="form_buttons">
+            <input type="reset" value="Wyczyść" class="form_button">   
+            <input type="submit" value="Wyślij" class="form_button" name="submit">
+          </div>
         </div>
       </fieldset>
     </form>
+    </div>
+    
   </div>
 
   <div id="footer">
     <div class="footer_address">
+      <h3>Hotel Holi</h3>
+      <address>ul. Widokowa 2 <br>
+      11-111 Karpacz
+      </address>
       
-        <h3>Hotel Holi</h3>
-        <address>ul. Widokowa 2 <br>
-        11-111 Karpacz</address>
-      
-
       <div>
         <img src="images/icons/mail.png" height="512px" width="512px">
         <a href="mailto: kontakt@holi.pl">kontakt@holi.pl</a>
@@ -323,9 +365,7 @@
 
     <div>
       <h3>Menu</h3>
-
       <ul class="footer_menu">
-  
         <li><a href="#aboutus">O nas</a> </li>
         <li><a href="#offer">Oferta</a> </li>
         <li><a href="#attractions">Atrakcje</a></li>

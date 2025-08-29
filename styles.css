@@ -1,6 +1,6 @@
 :root{
   --color-accent: rgba(52, 117, 52, 1);
-  --color-bg: rgb(218, 211, 199);
+  --color-bg: rgba(223, 220, 214, 1);
   --color-bg-dark: rgba(129, 121, 106, 1);
   --color-text-light: rgba(236, 235, 235, 1);
   --color-text-dark: rgba(88, 61, 31, 1);
@@ -14,8 +14,8 @@ html{
 body{
   background-color: rgba(246, 246, 246, 1);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  width:  80%;
-  max-width: 100%;
+  /* width:  80%;
+  max-width: 100%; */
   margin: 0px auto;
 }
 
@@ -129,10 +129,11 @@ h2{
 }
 
 
-.slider{
+#slider{
   top: 80px;
-  height: 60vh;
+  height: 70vh;
   position: relative;
+  width: 100%;
 }
 
 .slider_img{
@@ -140,7 +141,7 @@ h2{
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
   opacity: 0;
   transition: all 1s;
@@ -149,7 +150,7 @@ h2{
 .slider_img.active{
   background-color: rgba(73, 72, 72, 0.1);
   display: block;
-  height: 60vh;
+  height: 70vh;
   object-fit: cover;
   opacity: 1;
   width: 100%;
@@ -186,9 +187,7 @@ h2{
   left: 50%;
   bottom: 5%;
   transform: translate(-50%, 0%);
-
 }
-
 
 .dot{
   animation: GreentoWhite 1s;
@@ -207,11 +206,13 @@ h2{
 
 #aboutus{
   background-color: rgb(255, 255, 255);
-  padding: 100px 10px;
+  padding: 100px 0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px auto 0; 
+  /* margin-top: 50px; */
+  width: 80%;
 }
 
 
@@ -258,8 +259,10 @@ h2{
 
 #offer{
   background-color: white;
-  padding: 30px;
+  margin: 0 auto;
+  padding: 30px 0;
   position: relative;
+  width: 80%;
 }
 
 #offer h3{
@@ -282,13 +285,14 @@ h2{
   flex-direction: column;
   justify-content: center;
   margin: 5px;
-  padding: 30px 10px;
+  padding: 30px;
 }
 
 
 
 .oferta_img{
   height: 100%;
+  max-height: 220px;
   width: 100%;
   object-fit: cover;
   margin-bottom: 10px;
@@ -348,7 +352,9 @@ h2{
 
 #attractions{
   background: var(--color-bg);
-  padding: 30px;
+  margin: 0 auto;
+  padding: 30px 0px;
+  width: 80%;
 }
 
 
@@ -360,10 +366,10 @@ h2{
 
 
 .attraction{
-  height: 270px;
+  height: 280px;
   margin: 15px;
   position: relative;
-  width: 270px;
+  width: 280px;
 
 }
 
@@ -416,8 +422,9 @@ h2{
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 30px 0px;
-
+  margin: 0 auto;
+  padding: 100px 0px 120px 0;
+  width: 80%;
 }
 
 table{
@@ -456,8 +463,10 @@ th, td {
   background: var(--color-bg);
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   padding: 30px 0px;
   position: relative;
+  width: 80%;
 }
 
 
@@ -538,13 +547,15 @@ th, td {
 #contact{
   align-items: center;
   background-color: white;
+  color: var(--color-text-dark);
   display: flex;
   flex-direction: column;
-  
+  margin: 0 auto;
   padding: 30px 0px;
+  width: 80%;
 }
 
-fieldset{
+.contact-container{
   background: var(--color-bg);
   border: none;
   box-shadow: gray 0px 5px  15px;
@@ -555,8 +566,12 @@ fieldset{
 .contact_grid{
   display: grid;
   gap: 15px;
-  grid-template-columns: 35% 61% ;
+  grid-template-columns: 30% 68% ;
   margin: 0% 2%;
+}
+
+fieldset{
+  border: none;
 }
 
 .data_rezerwacji, .data_rezerwacji p{
@@ -565,12 +580,22 @@ fieldset{
 
 textarea{
   height: 200px;
+  border: none;
+  outline: none;
+  resize: none;
 }
 
 input{
-  border: black 1px solid;
+  border: none;
   border-radius: 5px;
   height: 26px;
+  font-size: 16px;
+  padding-left: 10px;
+  outline: none;
+}
+
+input[type="date"]{
+    color: var(--color-text-dark);
 }
 
 .formlularz_wyrownanie{
@@ -585,28 +610,40 @@ input{
 }
 
 .form_button{
-    background-color: transparent;
-    border: solid black 1px;
+    background-color: white;
     border-radius: 5px;
-    color: black;
+    color: var(--color-text-dark);
     margin: 20px 0px 20px 20px;
-    padding: 5px 30px 20px 30px;
-    transition: all 1s;
+    padding: 10px 40px 25px 40px;
+    transition: all 0.5s;
   }
   
   .form_button:hover{
     background-color: var(--color-accent);
-    border: none;
-    color: rgb(68, 87, 65);
+    color: var(--color-text-light);
     cursor: pointer;
-    transform: scale(1.10);
-    transition: all 1s;
+    transform: scale(1.05);
+    transition: all 0.5s;
     
   }
 
   input:focus, textarea:hover{
     background-color: rgb(245, 245, 245);
     
+  }
+
+  .success-message p{
+    background: var(--color-accent);
+    text-align: center;
+    color: white;
+    padding: 20px 0px;
+  }
+
+  .danger-message p{
+    background: var(--color-text-dark);
+    text-align: center;
+    color: white;
+    padding: 20px 0px;
   }
 
 #footer{
@@ -698,7 +735,7 @@ address{
   #aboutus{
     background-color: rgb(68, 87, 65);
     height: auto;
-    padding: 10px;
+    padding: 10px 0;
     position: sticky;
   }
   
@@ -790,10 +827,6 @@ address{
   color: var(--color-accent); 
  }
 
-
-  #offer{
-    padding: 10px;
-  }
 
   .oferta_grupa{
     display: flex;
