@@ -315,11 +315,8 @@
           <br>
           <div class="form_buttons">
             <input type="reset" value="Wyczyść" class="form_button">   
-<<<<<<< HEAD:index.php
             <input type="submit" value="Wyślij" class="form_button" name="submit">
-=======
-            <input type="submit" value="Wyślij" class="form_button">
->>>>>>> a49e29dc94586a5bf9731119d7f69ca399809a4c:index.html
+
           </div>
         </div>
       </fieldset>
