@@ -275,6 +275,7 @@
             
           }
        ?>
+       
       <form action="#contact" method="POST">
       <fieldset>
         <div class="contact_grid">
