@@ -732,7 +732,7 @@ address{
 
 @media screen and (max-width: 992px) {
   #aboutus{
-    background-color: rgb(68, 87, 65);
+    background-color: var(--color-bg);
     height: auto;
     padding: 10px 0;
     position: sticky;
@@ -760,6 +760,14 @@ address{
   
   }
 
+  nav{
+    width: 100vw;
+  }
+
+  #aboutus{
+    margin-top: 100px;
+  }
+
   nav p{
     display: none;
   }
@@ -769,6 +777,9 @@ address{
   .menu_list{
     display: none;
   }
+
+  
+  
 
   .menu_list.active{
     background: linear-gradient(to bottom left , #d0d0d0, rgb(68, 87, 65));
@@ -790,8 +801,13 @@ address{
     padding: 20px 10px;
   }
 
+    .menu_list a{
+      color: var(--color-text-light);
+  }
+
   h1{
     font-size: 24px;
+    margin-left: 20px;
   }
 
   .button_menu{
@@ -848,12 +864,24 @@ th, tr{
   }
 
   #contact{
+  width: 100%;
     background-color: transparent;
   }
 
   .contact-container{
   width: 100%;
 }
+
+.contact_grid{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr ;
+  margin: 0% 2%;
+  max-width: 80%;
+  }
+}
+
+
   fieldset{
     box-shadow: none;
     font-size: 12px;
@@ -871,10 +899,7 @@ th, tr{
     margin: 5px;
   }
   
-  .contact_grid{
-  gap: 10px;
-  max-width: 75%;
-  }
+
 
   #footer{
     display: block;
