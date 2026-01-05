@@ -31,9 +31,6 @@
             <a href="#offer">Oferta</a>
           </li>
           <li>
-            <a href="#pricelist">Cennik</a>
-          </li>
-          <li>
             <a href="#gallery">Galeria</a>
           </li>
           <li>
@@ -48,9 +45,9 @@
   <div id="slider">
     <h1>Witamy w Hotelu Holi</h1>
     <div>
-      <img src="images/img1.jpg" height="594px" width="1000px" class="slider_img active">
-      <img src="images/img2.jpg" height="594px" width="1000px" class="slider_img">
-      <img src="images/img3.jpg" height="594px" width="1000px" class="slider_img">
+      <img src="images/hero1.jpg" height="594px" width="1000px" class="slider_img active">
+      <img src="images/hero2.jpg" height="594px" width="1000px" class="slider_img">
+      <img src="images/hero3.jpg" height="594px" width="1000px" class="slider_img">
     </div>
       
     <button type="button" class="button_slider_left"><</button>
@@ -70,7 +67,7 @@
     <div class="aboutus_text">
       <h2>Witaj na naszej stronie</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sunt harum numquam dicta. Nemo fuga unde perspiciatis ex maxime quaerat excepturi itaque reprehenderit corporis error, earum iusto magni repudiandae iste.
+        Hotel Holi to kameralny hotel położony wśród górskiej przyrody, stworzony z myślą o prawdziwym wypoczynku. Stawiamy na ciszę, komfort i swobodną atmosferę, dzięki której można zwolnić tempo i cieszyć się każdą chwilą z dala od codziennego pośpiechu.
       </p>
       <button type="button" class="aboutus_button" href="#contact">Napisz do nas</button>
     </div>
@@ -86,7 +83,7 @@
         <p>Masaż</p>
         <div class="atr_text">
           <h3>Masaż</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolorem? Sapiente, velit asperiores corrupti </p>
+          <p>Chwila głębokiego relaksu i regeneracji po dniu w górach. Idealny sposób, by zadbać o ciało i wyciszyć umysł. </p>
         </div>
       </div>
 
@@ -95,7 +92,7 @@
         <p>Plac zabaw</p>
         <div class="atr_text">
           <h3>Plac zabaw</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, commodi cum voluptatibus, fuga, alias adipisci similique doloremnte molliti sit iusto!</p>
+          <p>Bezpieczna przestrzeń na świeżym powietrzu, sprzyjająca ruchowi i dobrej zabawie w naturalnym otoczeniu.</p>
         </div>
       </div>
 
@@ -104,7 +101,7 @@
         <p>Basen</p>
         <div class="atr_text">
           <h3>Basen</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quam facilis nobis molestiae eos, natus est impedit, architecni labore!</p>
+          <p>Przestrzeń do swobodnego wypoczynku i odprężenia. Doskonały zarówno na poranny rozruch, jak i wieczorny relaks.</p>
         </div>
       </div>
 
@@ -113,7 +110,7 @@
         <p>Sala zabaw</p>
         <div class="atr_text">
           <h3>Sala zabaw</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam, aboriosam animi itaque dignissimos dolorem, cum aliquid! Accusamus ea minima perspiciatis dolore.</p>
+          <p>Przestronna sala zabaw to miejsce, w którym dzieci mogą swobodnie spędzać czas, bawić się i rozwijać swoją wyobraźnię. </p>
         </div>
       </div>
 
@@ -122,7 +119,7 @@
           <p>Sauna</p>
           <div class="atr_text">
             <h3>Sauna</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus praesenelit molestias minus adipisci? Ullam sunt sapiente itaque explicabo aut quia.</p>
+            <p>Ciepło, spokój i regeneracja. Sauna pozwala rozluźnić mięśnie i odzyskać energię po aktywnym dniu.</p>
           </div>
       </div>
 
@@ -131,7 +128,7 @@
         <p>Trekking</p>
         <div class="atr_text">
           <h3>Trekking</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptat ut.</p>
+          <p>Góry na wyciągnięcie ręki. Liczne szlaki zachęcają do spacerów i dłuższych wędrówek wśród pięknych krajobrazów.</p>
         </div>
       </div>
 
@@ -146,7 +143,7 @@
         <img src="images/room1.jpg" class="oferta_img">
         <h3>Pokój 1-osobowy</h3>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste quae officiis minima dolorem. Deserunt magnam nulla culpa vitae animi quia, sed quas, maxime harum, rem necessitatibus cum ipsam dolorum!
+          Kameralny i komfortowy pokój, idealny dla osób podróżujących solo. Zapewnia wygodną przestrzeń do odpoczynku oraz spokojną atmosferę sprzyjającą relaksowi po dniu spędzonym w górach.
         </p> 
       </div>
 
@@ -154,7 +151,7 @@
         <img src="images/room2.jpg" class="oferta_img">
         <h3>Pokój 2-osobowy</h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, quisquam quibusdam hic dolores unde eligendi rerum repellat aliquid a modi, fugiat deserunt, laborum ipsum? Atque culpa nemo voluptate modi necessitatibus.
+          Przestronny i przytulny pokój, stworzony z myślą o wspólnym wypoczynku. To doskonałe miejsce na komfortowy nocleg i regenerację w górskim otoczeniu.
         </p>
       </div>
 
@@ -162,7 +159,7 @@
         <img src="images/room3.jpg" class="oferta_img">
         <h3>Pokój 3-osobowy</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatem nisi labore quam cumque sapiente sequi, obcaecati velit aut totam aperiam expedita, quaerat dicta magni repellendus, possimus veniam adipisci quis?
+          Najbardziej przestronna opcja dla osób ceniących wygodę i swobodę. Apartament oferuje większą przestrzeń do wypoczynku oraz podwyższony standard, idealny na dłuższy pobyt.
         </p>  
       </div>
 
@@ -174,36 +171,6 @@
     </div>
   </div>  
 
-  <div id="pricelist">
-    <h2> Cennik</h2>
-    <table>
-      <thead>
-        <th>typ pokoju</th>
-        <th>sezon niski</th>
-        <th>sezon wysoki</th>
-        <th class="hidden_column">święta, długie weekendy</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1-osobowy</td>
-          <td> 100 zł</td>
-          <td> 200 zł</td>
-          <td rowspan="3" class="hidden_column">ceny ustalane indywidualnie</td>
-        </tr>
-        <tr>
-          <td> 2-osobowy</td>
-          <td> 200 zł</td>
-          <td> 300 zł</td>
-        </tr>
-        <tr>
-          <td> apartament</td>
-          <td> 300 zł</td>
-          <td> 400 zł</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="pricelist_info">W przypadku świąt i długich weekendów ceny ustalane indywidualnie</p>
-  </div>
 
   <div id="gallery">
     <h2>Galeria</h2>
@@ -279,11 +246,11 @@
       <form action="#contact" method="POST">
       <fieldset>
         <div class="contact_grid">
-          <label>imię i nazwisko</label>
+          <label>Imię i nazwisko</label>
           <input type="text" name="name" required>
-          <label>adres e-mail</label>
+          <label>Adres e-mail</label>
           <input type="email" name="email" required>
-          <label>nr telefonu</label>
+          <label>Nr telefonu</label>
           <input type="text" name="phone" required>
        
           <label>Temat wiadomości</label>
@@ -313,7 +280,7 @@
           <label>Treść wiadomości</label>
           <textarea name="message" required ></textarea>
         
-          <br>
+          <br class="hidden">
           <div class="form_buttons">
             <input type="reset" value="Wyczyść" class="form_button">   
             <input type="submit" value="Wyślij" class="form_button" name="submit">
@@ -364,17 +331,20 @@
       </div>
     </div>
 
-    <div>
+    <div class="footer_menu">
       <h3>Menu</h3>
-      <ul class="footer_menu">
+      <ul>
         <li><a href="#aboutus">O nas</a> </li>
         <li><a href="#offer">Oferta</a> </li>
         <li><a href="#attractions">Atrakcje</a></li>
-        <li><a href="#pricelist">Cennik</a> </li>
         <li><a href="#gallery">Galeria</a> </li>
         <li><a href="#contact">Kontakt</a> </li>
       </ul>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Created by <a href="https://www.resposite.pl/"><strong>Resposite.pl</strong></a></p>
   </div>
 
   <script src="app.js"></script>

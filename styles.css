@@ -14,7 +14,7 @@ html{
 body{
   background-color: rgba(246, 246, 246, 1);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 
@@ -223,8 +223,7 @@ h2{
 
 
 
-.aboutus_text{
-  
+.aboutus_text{ 
   display: block;
   padding: 40px;
   width: 500px;
@@ -285,6 +284,7 @@ h2{
   justify-content: center;
   margin: 5px;
   padding: 30px;
+  width: 33%;
 }
 
 
@@ -377,8 +377,10 @@ h2{
 }
 
 .atr_img{
+  opacity: 0.8;
   max-height: 100%;
   max-width: 100%;
+
 }
 
 .atr_img + p{
@@ -414,47 +416,6 @@ h2{
 
 .atr_text h3{
   padding-top: 5px;
-}
-
-#pricelist{
-  align-items: center;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 100px 0px 120px 0;
-  width: 80%;
-}
-
-table{
-  background-color: rgba(215, 215, 215, 0.7);
-  box-shadow: gray 0px 5px  15px;
-  text-align: center;
-  width: 75%;
-
-}
-
-td:hover{
-  background-color:  rgb(245, 245, 245);
-}
-
-table, th, td {
-  border: solid 2px black;
-  border-collapse: collapse;
-}
-
-th{
-  background-color: rgb(218, 211, 199);
-  color: black;
-  font-weight: lighter;
-}
-
-th, td {
-  padding: 10px 0px;
-}
-
-.pricelist_info{
-  display: none;
 }
 
 #gallery{
@@ -680,7 +641,7 @@ address{
   
 }
 
-.footer_menu{
+.footer_menu ul{
   list-style: none;
   padding: 0px;
 }
@@ -696,6 +657,26 @@ address{
   color: var(--color-accent);
   cursor: pointer;
   font-weight: 600;
+}
+
+.footer-bottom{
+  background-color: black;
+  color: var(--color-bg);
+  padding: 8px 0px;
+  text-align: center;
+}
+
+.footer-bottom p{
+  margin: 0;
+}
+
+.footer-bottom a{
+    color: var(--color-bg);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover{
+  color: white;
 }
 
 @keyframes navFadeIn {
@@ -806,7 +787,6 @@ address{
   }
 
   h1{
-    font-size: 24px;
     margin-left: 20px;
   }
 
@@ -846,22 +826,28 @@ address{
   .oferta_grupa{
     display: flex;
     flex-direction: column;
-   
   }
- 
-th, tr{
-  padding: 10px 20px;
+
+  .oferta{
+  margin: 10px 0px;
+  width: 90%;
+  }
+
+  .oferta_img{
+  max-height: 100%;
 }
 
- .hidden_column{
-  display: none;
- }
+ 
+.attraction{
+  height: 240px;
+  width: 240px;
 
-  .pricelist_info{
-    display: block;
-    text-align: center;
-    padding: 10px 20px;
-  }
+}
+
+.gallery_img{
+  height: 100%;
+  width: 250px;
+}
 
   #contact{
   width: 100%;
@@ -869,7 +855,7 @@ th, tr{
   }
 
   .contact-container{
-  width: 100%;
+  width: 80%;
 }
 
 .contact_grid{
@@ -877,7 +863,7 @@ th, tr{
   gap: 10px;
   grid-template-columns: 1fr ;
   margin: 0% 2%;
-  max-width: 80%;
+  max-width: 100%;
   }
 
   fieldset{
@@ -896,17 +882,90 @@ th, tr{
   .formlularz_wyrownanie input{
     margin: 5px;
   }
-  
-
 
   #footer{
-    display: block;
-    padding: 30px;
+    display: flex;
+    padding: 20px 30px;
+  }
+
+  .footer_menu{
+    display: none;
   }
 
 }
 
+@media screen and (max-width: 576px){
+ h1{
+    font-size: 36px;
+  }
 
-  
+#aboutus{
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.aboutus_text{ 
+  padding: 20px;
+}
+
+#attractions{
+  width: 90%;
+}
+
+#offer{
+  width: 90%;
+}
+
+.oferta{
+  width: 80%;
+}
+
+#gallery{
+  width: 90%;
+}
+
+.contact-container{
+  width: 90%;
+}
+
+.contact_grid{
+  /* display: grid; */
+  /* gap: 10px;
+  grid-template-columns: 1fr ; */
+  margin: 0% 2%;
+  max-width: 100%;
+  width: 100%;
+  }
+
+  fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type=date]{
+    margin-bottom: 10px;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .form_buttons{
+    justify-content: center;
+  }
+
+  .form_buttons input{
+    font-size: 14px;
+    margin: 10px;
+    padding: 0px 20px;
+  }
+
+  #footer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  }
+}
 
  
